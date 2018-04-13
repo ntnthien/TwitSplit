@@ -1,14 +1,11 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  TwitSplit
-//
-//  Created by Do Nguyen on 4/13/18.
-//  Copyright © 2018 Zincer. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
