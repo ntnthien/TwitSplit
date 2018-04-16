@@ -32,10 +32,11 @@ class HomeViewController: UIViewController {
         self.viewModel.tweetsDriver.drive(onNext: { [weak self] (result) in
             switch result {
             case .failure(let error):
-                UIAlertController.present(title: "Error", message: "\(error)", actionTitles: ["OK"])
+                UIAlertController.present(title: "Error", message: "\(error.localizedDesc)", actionTitles: ["OK"])
             case .success(let tweets):
                 guard let `self` = self else { return }
                 self.items += tweets
+                self.tweetTextField.text = ""
             }
         }).disposed(by: self.disposeBag)
         

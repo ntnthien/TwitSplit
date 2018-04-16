@@ -25,7 +25,7 @@ class TweetService {
     
     /// Validate Empty String
     func validateEmptyString(content: String) -> TweetError? {
-        return content.isEmpty ? .invalid : nil
+        return content.isEmpty ? .empty : nil
     }
     
     /// Validate Max Char Count

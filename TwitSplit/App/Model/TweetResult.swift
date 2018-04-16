@@ -6,8 +6,20 @@
 import Foundation
 
 enum TweetError: Error {
+    case empty
     case charsCountExccess
     case invalid
+    
+    var localizedDesc: String {
+        switch self {
+        case .empty:
+            return "You haven't enter any word. Please enter it!"
+        case .charsCountExccess:
+            return "You have enter a word that have the character count excess the limit. Please try again!"
+        case .invalid:
+            return "Oops, an error occurs. Please try again!"
+        }
+    }
 }
 
 enum TweetResult {
