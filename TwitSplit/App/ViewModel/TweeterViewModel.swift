@@ -14,6 +14,11 @@ protocol TweeterViewModelType {
 class TweeterViewModel: TweeterViewModelType {
     let tweetsVariable: Variable<[Tweet]> = Variable<[Tweet]>([])
     lazy var tweetsObservable: Observable<[Tweet]> = self.tweetsVariable.asObservable()
+    let service: TweetService!
     
+    
+    init(service: TweetService = TweetService()) {
+        self.service = service
+    }
     
 }

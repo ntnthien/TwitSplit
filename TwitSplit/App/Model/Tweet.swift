@@ -6,5 +6,5 @@
 import Foundation
 
 struct Tweet {
-    var message: String
+    var content: String
 }
