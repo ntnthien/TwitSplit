@@ -11,11 +11,11 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let result = TweetService().tweet(content: "")
+        let result = TweetService().postTweet(content: "")
         
         switch result {
         case .failure(let error):
-            print("\(error)")
+            self.presentAlert(title: "Error", message: "\(error)", actionTitles: ["OK"])
         case .success(let value):
             value.forEach { tweet in
                 print("\(tweet.content)")

@@ -18,7 +18,8 @@
 		C22DFAE0208439F7006DD470 /* TweetResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22DFADF208439F7006DD470 /* TweetResult.swift */; };
 		C22DFAE22084501A006DD470 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22DFAE12084501A006DD470 /* StringExtensions.swift */; };
 		C22DFAE620845DB8006DD470 /* TweetProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22DFAE520845DB8006DD470 /* TweetProcessor.swift */; };
-		C22DFAE820847661006DD470 /* UIAlertViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22DFAE720847661006DD470 /* UIAlertViewExtensions.swift */; };
+		C22DFAE820847661006DD470 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22DFAE720847661006DD470 /* UIAlertControllerExtensions.swift */; };
+		C22DFAEA20847BD7006DD470 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22DFAE920847BD7006DD470 /* AppCoordinator.swift */; };
 		C2B612682080978500E42698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B612672080978500E42698 /* AppDelegate.swift */; };
 		C2B6126A2080978500E42698 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B612692080978500E42698 /* HomeViewController.swift */; };
 		C2B6126D2080978500E42698 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B6126B2080978500E42698 /* Main.storyboard */; };
@@ -61,7 +62,8 @@
 		C22DFADF208439F7006DD470 /* TweetResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetResult.swift; sourceTree = "<group>"; };
 		C22DFAE12084501A006DD470 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		C22DFAE520845DB8006DD470 /* TweetProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetProcessor.swift; sourceTree = "<group>"; };
-		C22DFAE720847661006DD470 /* UIAlertViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertViewExtensions.swift; sourceTree = "<group>"; };
+		C22DFAE720847661006DD470 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
+		C22DFAE920847BD7006DD470 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C2B612642080978500E42698 /* TwitSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B612672080978500E42698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2B612692080978500E42698 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -146,7 +148,7 @@
 			children = (
 				C22DFADD20842CE5006DD470 /* Constants.swift */,
 				C22DFAE12084501A006DD470 /* StringExtensions.swift */,
-				C22DFAE720847661006DD470 /* UIAlertViewExtensions.swift */,
+				C22DFAE720847661006DD470 /* UIAlertControllerExtensions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				C2B612672080978500E42698 /* AppDelegate.swift */,
+				C22DFAE920847BD7006DD470 /* AppCoordinator.swift */,
 				C22DFADC20842CD6006DD470 /* Helper */,
 				C2B6129C20809B7900E42698 /* Model */,
 				C2B6129B20809B6A00E42698 /* View */,
@@ -578,8 +581,9 @@
 			files = (
 				C22DFAE620845DB8006DD470 /* TweetProcessor.swift in Sources */,
 				C2B6129F20809BC300E42698 /* TweeterViewModel.swift in Sources */,
+				C22DFAEA20847BD7006DD470 /* AppCoordinator.swift in Sources */,
 				C22DFAD6208428F0006DD470 /* Tweet.swift in Sources */,
-				C22DFAE820847661006DD470 /* UIAlertViewExtensions.swift in Sources */,
+				C22DFAE820847661006DD470 /* UIAlertControllerExtensions.swift in Sources */,
 				C22DFAE22084501A006DD470 /* StringExtensions.swift in Sources */,
 				C22DFADB208429F5006DD470 /* UserManager.swift in Sources */,
 				C22DFAD820842984006DD470 /* User.swift in Sources */,
