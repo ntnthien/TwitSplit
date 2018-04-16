@@ -17,10 +17,48 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmi-CJ-ht5">
+                                <rect key="frame" x="0.0" y="609" width="375" height="58"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaA-sb-WJi">
+                                        <rect key="frame" x="310" y="14" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="xbi-yk-rGH"/>
+                                        </constraints>
+                                        <state key="normal" title="Tweet"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bUp-Ol-KXd">
+                                        <rect key="frame" x="15" y="14" width="280" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="bUp-Ol-KXd" firstAttribute="leading" secondItem="mmi-CJ-ht5" secondAttribute="leading" constant="15" id="24k-hN-MQF"/>
+                                    <constraint firstAttribute="height" constant="58" id="666-Fp-w5c"/>
+                                    <constraint firstItem="WaA-sb-WJi" firstAttribute="leading" secondItem="bUp-Ol-KXd" secondAttribute="trailing" constant="15" id="doS-ng-KaZ"/>
+                                    <constraint firstItem="WaA-sb-WJi" firstAttribute="centerY" secondItem="mmi-CJ-ht5" secondAttribute="centerY" id="fwY-b1-09E"/>
+                                    <constraint firstItem="bUp-Ol-KXd" firstAttribute="centerY" secondItem="mmi-CJ-ht5" secondAttribute="centerY" id="jEw-G2-uUq"/>
+                                    <constraint firstAttribute="trailing" secondItem="WaA-sb-WJi" secondAttribute="trailing" constant="15" id="wk7-br-m11"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mmi-CJ-ht5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9b2-1h-AWO"/>
+                            <constraint firstItem="mmi-CJ-ht5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fh0-pn-3Tu"/>
+                            <constraint firstItem="mmi-CJ-ht5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zvz-3d-mrj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="7yc-0Q-An0"/>
+                    <connections>
+                        <outlet property="tweetButton" destination="WaA-sb-WJi" id="XP2-wz-eyC"/>
+                        <outlet property="tweetTextField" destination="bUp-Ol-KXd" id="Byq-0b-Tnk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

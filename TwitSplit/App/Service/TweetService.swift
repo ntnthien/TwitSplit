@@ -4,12 +4,13 @@
 //
 
 import Foundation
+import RxSwift
 
 class TweetService {
     struct TweetConfig {
         var maxCharCount: Int
         var maxCharCountAvoidCounter: Int {
-            return self.maxCharCount - 4
+            return self.maxCharCount - 4 // Remove counter part
         }
         var charSet: CharacterSet
     }
@@ -92,5 +93,16 @@ class TweetService {
         }
         
         return .success(result)
+    }
+    
+    // Return post tweet observer
+    func postTweetObserver(content: String) -> Observable<TweetResult> {
+        return Observable.create {[unowned self] (observer) -> Disposable in
+            let result = self.postTweet(content: content)
+            
+            observer.onNext(result)
+            
+            return Disposables.create()
+        }
     }
 }
