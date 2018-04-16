@@ -30,7 +30,7 @@ class TweetService {
     
     /// Validate Max Char Count
     func validateMaxCharCount(components: [String], maxCharCount: Int) -> TweetError? {
-        return components.filter { $0.count > maxCharCount }.count > 0 ? .invalid : nil
+        return components.filter { $0.count > maxCharCount }.count > 0 ? .charsCountExccess : nil
     }
     
     /// Combine with counter `<index>/<count> <content>`
@@ -62,10 +62,10 @@ class TweetService {
     // MARK: - Tweet
     
     /// Post Tweet
-    func postTweet(content: String) -> TweetResult {
+    func postTweet(content: String, user: User) -> TweetResult {
         // Trim the Content first
         let trimmedContent = content.trim()
-        
+
         // Validate Content
         if let error = self.validateEmptyString(content: trimmedContent) {
             return TweetResult.failure(error)
@@ -73,7 +73,7 @@ class TweetService {
         
         // Happy case (count < MaxCount)
         if content.count < config.maxCharCount {
-            return .success([Tweet(content: content)])
+            return .success([Tweet(content: content, user: user)])
         }
         
         // Start splitting into components
@@ -86,19 +86,19 @@ class TweetService {
         
         // Process String
         let processed: [String] = self.process(components: components, maxCharCount: config.maxCharCountAvoidCounter)
-        
+        // Get current User
         // Combine with counter
         let result: [Tweet] = processed.enumerated().map { (index, content) in
-            return Tweet(content: self.combineContentWithCounter(content: content, lineIndex: index, lineCount: processed.count))
+            return Tweet(content: self.combineContentWithCounter(content: content, lineIndex: index, lineCount: processed.count), user: user)
         }
         
         return .success(result)
     }
     
     // Return post tweet observer
-    func postTweetObserver(content: String) -> Observable<TweetResult> {
+    func postTweetObserver(content: String, user: User) -> Observable<TweetResult> {
         return Observable.create {[unowned self] (observer) -> Disposable in
-            let result = self.postTweet(content: content)
+            let result = self.postTweet(content: content, user: user)
             
             observer.onNext(result)
             

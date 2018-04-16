@@ -17,7 +17,7 @@ class TweeterViewModel: TweeterViewModelType {
     init(service: TweetService = TweetService(), tweetContent: Driver<String>, tweetTap: Signal<()>) {
         self.service = service
         self.tweetsDriver = tweetTap.withLatestFrom(tweetContent).flatMapLatest { content in
-            service.postTweetObserver(content: content)
+            service.postTweetObserver(content: content, user: UserManager.shared.activeUser!)
                 .asDriver(onErrorJustReturn: .failure(.invalid))
         }
     }

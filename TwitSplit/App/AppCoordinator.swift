@@ -17,9 +17,12 @@ class AppCoordinator {
             self.rootNavigationController = navigationController
         }
         
-        self.rootNavigationController.isNavigationBarHidden = true
+        // Mock User Login
+        UserManager.shared.login(user: User(id: UUID(), name: "Do Nguyen", avatarUrl: nil))
         
-        if let homeViewController = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
+        // Navigate to HomeViewController after the user is authenticated
+        if UserManager.shared.activeUser != nil, let homeViewController = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
+            
             self.rootNavigationController.setViewControllers([homeViewController], animated: false)
         }
     }
