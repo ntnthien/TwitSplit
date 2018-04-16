@@ -60,7 +60,7 @@ RxSwift + RxCocoa
 ## Demo
 
 Here's a walkthrough of implemented user stories:
-<img src='https://imgur.com/a/wHq6v' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/paI2JcgT5502UimV5I/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ## Notes
