@@ -4,10 +4,28 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TwitSplit.xcscheme</key>
+		<key>TwitSplit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>7</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>C2B612632080978500E42698</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C2B612772080978700E42698</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C2B612822080978700E42698</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
