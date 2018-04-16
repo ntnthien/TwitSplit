@@ -15,7 +15,7 @@ enum TweetError: Error {
         case .empty:
             return "You haven't enter any word. Please enter it!"
         case .charsCountExccess:
-            return "You have enter a word that have the character count excess the limit. Please try again!"
+            return "You h. Please try again!"
         case .invalid:
             return "Oops, an error occurs. Please try again!"
         }
