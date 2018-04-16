@@ -33,7 +33,7 @@ class TweetService {
         return components.filter { $0.count > maxCharCount }.count > 0 ? .charsCountExccess : nil
     }
     
-    /// Combine with counter `<index>/<count> <content>`
+    /// Combine with counter `<index+1>/<count> <content>`
     func combineContentWithCounter(content: String, lineIndex: Int, lineCount: Int) -> String {
         return "\(lineIndex + 1)/\(lineCount) \(content)"
     }

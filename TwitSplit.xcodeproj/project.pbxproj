@@ -20,6 +20,8 @@
 		C22DFAE820847661006DD470 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22DFAE720847661006DD470 /* UIAlertControllerExtensions.swift */; };
 		C22DFAEA20847BD7006DD470 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22DFAE920847BD7006DD470 /* AppCoordinator.swift */; };
 		C22DFAEE208490B4006DD470 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22DFAED208490B4006DD470 /* TweetTableViewCell.swift */; };
+		C22DFAF120849DE9006DD470 /* TweetServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22DFAF020849DE9006DD470 /* TweetServiceTest.swift */; };
+		C22DFAF42084A2AB006DD470 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22DFAF32084A2AB006DD470 /* StringHelper.swift */; };
 		C2B612682080978500E42698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B612672080978500E42698 /* AppDelegate.swift */; };
 		C2B6126A2080978500E42698 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B612692080978500E42698 /* HomeViewController.swift */; };
 		C2B6126D2080978500E42698 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B6126B2080978500E42698 /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 		C22DFAE720847661006DD470 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
 		C22DFAE920847BD7006DD470 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C22DFAED208490B4006DD470 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		C22DFAF020849DE9006DD470 /* TweetServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetServiceTest.swift; sourceTree = "<group>"; };
+		C22DFAF32084A2AB006DD470 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
 		C2B612642080978500E42698 /* TwitSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B612672080978500E42698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2B612692080978500E42698 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +157,22 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		C22DFAEF20849DD4006DD470 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C22DFAF020849DE9006DD470 /* TweetServiceTest.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C22DFAF22084A297006DD470 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C22DFAF32084A2AB006DD470 /* StringHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		C2B4AB9120809E1C0090F48C /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +217,8 @@
 		C2B6127B2080978700E42698 /* TwitSplitTests */ = {
 			isa = PBXGroup;
 			children = (
+				C22DFAF22084A297006DD470 /* Helper */,
+				C22DFAEF20849DD4006DD470 /* Service */,
 				C2B6127C2080978700E42698 /* TwitSplitTests.swift */,
 				C2B6127E2080978700E42698 /* Info.plist */,
 			);
@@ -599,7 +621,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22DFAF42084A2AB006DD470 /* StringHelper.swift in Sources */,
 				C2B6127D2080978700E42698 /* TwitSplitTests.swift in Sources */,
+				C22DFAF120849DE9006DD470 /* TweetServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
